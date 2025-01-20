@@ -1,0 +1,16 @@
+Feature: Product Management
+
+  Scenario: List all products
+    Given the product data is loaded
+    When I request all products
+    Then I should see a list of products
+
+  Scenario: Create a product
+    Given the product data is loaded
+    When I create a new product
+    Then I should see the product in the list
+
+  Scenario: Delete a product
+    Given the product data is loaded
+    When I delete a product
+    Then it should no longer be available
